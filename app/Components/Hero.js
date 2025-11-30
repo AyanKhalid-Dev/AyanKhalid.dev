@@ -16,7 +16,7 @@ export default function Home() {
       {/* HERO */}
       <section className="min-h-screen flex flex-col justify-center items-center px-6 text-center pt-20 pb-32">
         <div className="max-w-5xl w-full">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mt-[20px] mb-1 leading-tight">
+          <h1 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mt-[30px] mb-1 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-cyan-300">
               Full Stack Developer
             </span>
@@ -28,7 +28,7 @@ export default function Home() {
 
           <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 sm:p-8 mb-5 max-w-4xl mx-auto">
             <p className="text-lg sm:text-xl md:text-2xl text-gray-100 leading-relaxed">
-              Hi, I’m <span className="text-cyan-300 font-bold">Ayan Khalid</span> — Full-Stack Developer specializing in<br className="hidden sm:block" />
+              Hi, I’m <span className="text-cyan-300 font-bold">Ayan Khalid</span> Full-Stack Developer specializing in<br className="hidden sm:block" />
               <span className="text-purple-300 font-bold"> high-converting roofing websites</span>.
               <br/><br/>
               I build <span className="text-cyan-300 font-bold">lead-generating machines</span> that load in &lt;1.5s,
@@ -106,9 +106,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
             {[
-              { name: "SummitPro Roofing", desc: "100/100 SEO · Gallery + Formspree · 8+ daily leads", live: "https://summitproroofing.vercel.app" },
-              { name: "Apex Roofing Co", desc: "Emergency CTA + Quote Calculator · Phone never stops", live: "https://apexroofingco.vercel.app" },
-              { name: "PeakShield Roofing", desc: "24/7 leads + Storm tool · #1 Google in 3 weeks", live: "https://peakshieldroofing.vercel.app" }
+              { name: "SummitPro Roofing", desc: "100/100 SEO · Gallery + Formspree · Helps you get not only general messages but also actual leads", live: "https://summitproroofing.vercel.app" },
+              { name: "Apex Roofing Co", desc: "Emergency CTA + Quote Request Form · Make your phone ring whole day", live: "https://apexroofingco.vercel.app" },
+              { name: "PeakShield Roofing", desc: "24/7 leads + Quote Request· potential of #1 Google in 3 weeks", live: "https://peakshieldroofing.vercel.app" }
             ].map((p) => (
               <div key={p.name} className="group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:border-purple-500/60 hover:bg-white/8 transition-all duration-500 hover:-translate-y-2">
                 <h3 className="text-3xl sm:text-4xl font-black text-white mb-4">{p.name}</h3>
