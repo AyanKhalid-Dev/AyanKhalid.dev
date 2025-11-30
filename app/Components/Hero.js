@@ -14,9 +14,9 @@ export default function Home() {
       </div>
 
       {/* HERO */}
-      <section className="min-h-screen flex flex-col justify-center items-center px-6 text-center pt-20 pb-32">
+      <section className="min-h-screen flex flex-col justify-center items-center px-6 text-center  pb-32">
         <div className="max-w-5xl w-full">
-          <h1 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mt-[30px] mb-1 leading-tight">
+          <h1 className="text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white  mb-1 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-200 to-cyan-300">
               Full Stack Developer
             </span>

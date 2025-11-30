@@ -7,20 +7,20 @@ import { Github, Menu, X } from 'lucide-react';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" }
+  const sections = [
+    { name: 'Home', id: 'hero' },
+    { name: 'About', id: 'about' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Contact', id: 'contact' }
   ];
-  
 
   return (
     <>
-      {/* Fixed Navbar */}
+      {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-purple-500/30">
         <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
 
+          {/* Logo */}
           <Link href="/" className="z-50">
             <h1 className="text-2xl md:text-3xl font-black">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-cyan-300 to-purple-400">
@@ -29,14 +29,25 @@ export default function Navbar() {
             </h1>
           </Link>
 
-          {/* Desktop Menu */}
+          {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-10">
-            {navLinks.map(link => (
-              <Link key={link.name} href={link.href} className="text-gray-300 hover:text-white text-lg font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-purple-400 after:to-cyan-400 after:transition-all hover:after:w-full transition">
-                {link.name}
+            {sections.map(sec => (
+              <Link
+                key={sec.name}
+                href={`#${sec.id}`}
+                className="text-lg font-medium text-gray-300 hover:text-white transition
+                relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r 
+                after:from-purple-400 after:to-cyan-400 after:transition-all hover:after:w-full"
+              >
+                {sec.name}
               </Link>
             ))}
-            <a href="https://github.com/AyanKhalid-Dev" target="_blank" className="p-3 rounded-full bg-white/10 border border-white/20 hover:border-purple-500/70 transition">
+
+            <a
+              href="https://github.com/AyanKhalid-Dev"
+              target="_blank"
+              className="p-3 rounded-full bg-white/10 border border-white/20 hover:border-purple-500/70 transition"
+            >
               <Github className="w-6 h-6 text-gray-300 hover:text-white" />
             </a>
           </div>
@@ -48,54 +59,40 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* MOBILE MENU — AB TEXT BILKUL CLEAR DIKHEGA */}
+      {/* Mobile Menu */}
+      
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-gradient-to-br from-[#0d1b1e] via-[#071012] to-[#001f24]">
+        <div className="fixed inset-0 z-40 bg-gray-950 mt-20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-cyan-900/40" />
 
-          
-          {/* Subtle purple-cyan glow effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-transparent to-cyan-900/40" />
-          
-          {/* Content — Super Clear */}
-          <div className="relative h-full flex flex-col items-center justify-center gap-16 px-8">
+          <div className="relative h-full flex flex-col items-center justify-center gap-16">
+            
 
-            {/* Close Button */}
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-8 right-8 p-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/30 hover:bg-white/20 transition-all hover:scale-110"
-            >
-              <X className="w-10 h-10 text-white" />
-            </button>
-
-            {/* Navigation Links — Bada, Bold, Clear */}
-            <section className='mt-10 flex flex-col gap-10 text-center'>
-            {navLinks.map((link) => (
+            {sections.map(sec => (
               <Link
-                key={link.name}
-                href={link.href}
+                key={sec.name}
+                href={`#${sec.id}`}
                 onClick={() => setIsOpen(false)}
-                className="text-2xl  sm:text-7xl font-black text-white hover:scale-110 transition-all duration-300"
+                className="text-2xl font-black text-white hover:scale-110 transition"
               >
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 via-cyan-300 to-purple-300 drop-shadow-2xl">
-                  {link.name}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-cyan-300">
+                  {sec.name}
                 </span>
               </Link>
             ))}
-            </section>
 
-            {/* GitHub Icon */}
             <a
               href="https://github.com/AyanKhalid-Dev"
               target="_blank"
-              rel="noopener noreferrer"
-              className="mt-10 p-2 rounded-3xl bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-2xl hover:scale-110"
+              className="p-4 rounded-3xl bg-gradient-to-r from-purple-600 to-cyan-600 hover:scale-110 transition shadow-2xl"
             >
-              <Github className="w-15 h-15 text-white" />
+              <Github className="w-10 h-10 text-white" />
             </a>
           </div>
         </div>
       )}
-      </>
-  )
+
+      <div className="h-24 md:h-28" />
+    </>
+  );
 }
-      
