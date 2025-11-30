@@ -260,7 +260,7 @@ export default function Home() {
     {/* Copyright */}
     <div className="text-gray-500 text-sm tracking-wider">
       © {new Date().getFullYear()} Ayan Khalid. Built with 
-      <span className="text-purple-400 font-semibold"> Next.js & Love</span>
+      <span className="text-purple-400 font-semibold"> Next.js</span>
     </div>
 
     {/* Decorative glow line */}
