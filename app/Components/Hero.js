@@ -27,7 +27,7 @@ export default function Home() {
           </p>
 
           <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 sm:p-8 mb-5 max-w-4xl mx-auto">
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-100 leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-100 leading-relaxed md:w-full">
               Hi, I’m <span className="text-cyan-300 font-bold">Ayan Khalid</span> Full-Stack Developer specializing in<br className="hidden sm:block" />
               <span className="text-purple-300 font-bold"> high-converting roofing websites</span>.
               <br/><br/>
@@ -105,22 +105,63 @@ export default function Home() {
           <p className="text-purple-200 text-lg sm:text-xl mb-16">Real roofing websites getting real jobs daily</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            {[
-              { name: "SummitPro Roofing", desc: "100/100 SEO · Gallery + Formspree · Helps you get not only general messages but also actual leads", live: "https://summitproroofing.vercel.app" },
-              { name: "Apex Roofing Co", desc: "Emergency CTA + Quote Request Form · Make your phone ring whole day", live: "https://apexroofingco.vercel.app" },
-              { name: "PeakShield Roofing", desc: "24/7 leads + Quote Request· potential of #1 Google in 3 weeks", live: "https://peakshieldroofing.vercel.app" }
-            ].map((p) => (
-              <div key={p.name} className="group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:border-purple-500/60 hover:bg-white/8 transition-all duration-500 hover:-translate-y-2">
-                <h3 className="text-3xl sm:text-4xl font-black text-white mb-4">{p.name}</h3>
-                <p className="text-gray-300 mb-8 text-base sm:text-lg leading-relaxed">{p.desc}</p>
-                <div className="flex gap-4">
-                  <a href={p.live} target="_blank" rel="noopener noreferrer" className="flex-1 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-2xl hover:from-purple-600 hover:to-cyan-600 transition-all shadow-xl flex items-center justify-center gap-3">
-                    <ExternalLink className="w-5 h-5" /> Live Demo
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+  {[
+    {
+      name: "SummitProRoofing",
+      desc: "100/100 SEO · Gallery + Formspree · Helps you get not only general messages but also actual leads",
+      live: "https://summitproroofing.vercel.app",
+      github: "https://github.com/AyanKhalid-Dev/summitproroofing",
+    },
+    {
+      name: "Apex Roofing Co",
+      desc: "Emergency CTA + Quote Request Form · Make your phone ring whole day",
+      live: "https://apexroofingco.vercel.app",
+      github: "https://github.com/AyanKhalid-Dev/apexroofingco",
+    },
+    {
+      name: "PeakShield Roofing",
+      desc: "24/7 leads + Quote Request · potential of #1 Google in 3 weeks",
+      live: "https://peakshieldroofing.vercel.app",
+      github: "https://github.com/AyanKhalid-Dev/peakshieldroofing",
+    },
+  ].map((p) => (
+    <div
+      key={p.name}
+      className="group bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 hover:border-purple-500/60 hover:bg-white/8 transition-all duration-500 hover:-translate-y-2"
+    >
+      <h3 className="text-3xl sm:text-4xl font-black text-white mb-4">
+        {p.name}
+      </h3>
+
+      <p className="text-gray-300 mb-8 text-base sm:text-lg leading-relaxed">
+        {p.desc}
+      </p>
+
+      <div className="flex gap-4 flex-col md:flex-row">
+        {/* GitHub Button */}
+        <a
+          href={p.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 py-4 bg-gradient-to-r from-cyan-500 to-cyan-900 text-white font-bold rounded-2xl hover:from-cyan-600 hover:to-cyan-900 transition-all shadow-xl flex items-center justify-center gap-3"
+        >
+          <Github className="w-5 h-5" /> Github
+        </a>
+
+        {/* Live Demo Button */}
+        <a
+          href={p.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-2xl hover:from-purple-600 hover:to-cyan-600 transition-all shadow-xl flex items-center justify-center gap-3"
+        >
+          <ExternalLink className="w-5 h-5" /> Live Demo
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
 
