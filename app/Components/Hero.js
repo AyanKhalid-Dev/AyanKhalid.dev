@@ -87,9 +87,9 @@ export default function Home() {
           <p className="text-purple-200 text-lg sm:text-xl mb-12">Tools I use to build roofing empires online</p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB", "Formspree", "Vercel", "GitHub"].map((tech) => (
+            {["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB", " Formspree ", "Vercel", "GitHub"].map((tech) => (
               <div key={tech} className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl px-6 py-8 hover:border-purple-500/60 hover:bg-white/8 transition-all">
-                <p className="text-xl sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+                <p className="text-[18px] sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
                   {tech}
                 </p>
               </div>
@@ -153,14 +153,14 @@ export default function Home() {
                   <Calendar className="w-16 h-16 text-purple-400" />
                 </div>
                 <p className="text-purple-300 text-sm tracking-wider">BOOK A CALL</p>
-                <a href="https://cal.com/ayankhalid" target="_blank" rel="noopener noreferrer" className="text-2xl md:text-3xl font-black text-white hover:text-purple-300 transition">
+                <a href="https://calendly.com/ayan-ayankhalid/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="text-2xl md:text-3xl font-black text-white hover:text-purple-300 transition">
                   Free 15-min Strategy Call
                 </a>
               </div>
             </div>
           </div>
 
-          <a href="https://cal.com/ayankhalid" target="_blank" className="mt-16 px-12 py-6 sm:px-16 sm:py-8 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-xl sm:text-2xl font-black rounded-full hover:scale-110 transition-all shadow-2xl">
+          <a href="https://calendly.com/ayan-ayankhalid/30min" target="_blank" className="mt-16 px-12 py-6 sm:px-16 sm:py-8 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-xl sm:text-2xl font-black rounded-full hover:scale-110 transition-all shadow-2xl">
             Book Free Call Now
           </a>
         </div>
@@ -195,7 +195,7 @@ export default function Home() {
 
       {/* Book a Call */}
       <a
-        href="https://cal.com/ayankhalid"
+        href="https://calendly.com/ayan-ayankhalid/15-minute-meeting"
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-4 px-8 py-5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-purple-600/50"
