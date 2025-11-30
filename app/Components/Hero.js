@@ -107,7 +107,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
   {[
     {
-      name: "SummitProRoofing",
+      name: "SummitPro Roofing",
       desc: "100/100 SEO · Gallery + Formspree · Helps you get not only general messages but also actual leads",
       live: "https://summitproroofing.vercel.app",
       github: "https://github.com/AyanKhalid-Dev/summitproroofing",
