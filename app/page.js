@@ -33,6 +33,17 @@ export default function LandingPage() {
     ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0.95)']
   );
 
+  const scrollToSection = (sectionId) => {
+    setMobileMenuOpen(false);
+    // Add delay to allow menu to close before scrolling
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -103,26 +114,26 @@ export default function LandingPage() {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-12">
               {['Services', 'Tech Stack', 'About'].map((item) => (
-                <a
+                <button
                   key={item}
-                  href={`#${item.toLowerCase().replace(' ', '-')}`}
+                  onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
                   className="text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                 >
                   {item}
-                </a>
+                </button>
               ))}
             </div>
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <motion.a
-                href="#cta"
+              <motion.button
+                onClick={() => scrollToSection('cta')}
                 whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(0, 255, 255, 0.6)' }}
                 whileTap={{ scale: 0.95 }}
                 className="px-6 py-2.5 bg-gradient-to-r from-cyan-400 to-cyan-600 text-black font-semibold rounded-lg transition-all duration-300 text-sm"
               >
                 Free AI Audit
-              </motion.a>
+              </motion.button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -144,23 +155,21 @@ export default function LandingPage() {
                 className="md:hidden pb-4 space-y-3 border-t border-cyan-500/10"
               >
                 {['Services', 'Tech Stack', 'About'].map((item) => (
-                  <a
+                  <button
                     key={item}
-                    href={`#${item.toLowerCase().replace(' ', '-')}`}
+                    onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
                     className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/5 rounded transition-colors"
-                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {item}
-                  </a>
+                  </button>
                 ))}
-                <motion.a
-                  href="#cta"
+                <motion.button
+                  onClick={() => scrollToSection('cta')}
                   whileHover={{ scale: 1.02 }}
                   className="block px-4 py-2.5 bg-gradient-to-r from-cyan-400 to-cyan-600 text-black font-semibold rounded-lg text-center text-sm"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Free AI Audit
-                </motion.a>
+                </motion.button>
               </motion.div>
             )}
           </AnimatePresence>
@@ -168,7 +177,7 @@ export default function LandingPage() {
       </motion.nav>
 
       {/* ==================== HERO SECTION ==================== */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Gradient Orbs */}

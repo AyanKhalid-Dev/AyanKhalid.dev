@@ -9,10 +9,21 @@ export default function Navbar() {
 
   const sections = [
     { name: 'Home', id: 'hero' },
-    { name: 'About', id: 'about' },
-    { name: 'Projects', id: 'projects' },
-    { name: 'Contact', id: 'contact' }
+    { name: 'Services', id: 'services' },
+    { name: 'Tech Stack', id: 'tech-stack' },
+    { name: 'About', id: 'about' }
   ];
+
+  const scrollToSection = (id) => {
+    setIsOpen(false);
+    // Add delay to allow menu to close before scrolling
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  };
 
   return (
     <>
@@ -32,15 +43,15 @@ export default function Navbar() {
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-10">
             {sections.map(sec => (
-              <Link
+              <button
                 key={sec.name}
-                href={`#${sec.id}`}
+                onClick={() => scrollToSection(sec.id)}
                 className="text-lg font-medium text-gray-300 hover:text-white transition
                 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r 
                 after:from-purple-400 after:to-cyan-400 after:transition-all hover:after:w-full"
               >
                 {sec.name}
-              </Link>
+              </button>
             ))}
 
             <a
@@ -60,31 +71,27 @@ export default function Navbar() {
       </nav>
 
       {/* Mobile Menu */}
-      
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-gray-950 mt-20">
+        <div className="fixed top-20 left-0 right-0 bottom-0 z-40 bg-gray-950">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-cyan-900/40" />
 
-          <div className="relative h-full flex flex-col items-center justify-center gap-16">
-            
-
+          <div className="relative h-full flex flex-col items-center justify-center gap-16 pt-10">
             {sections.map(sec => (
-              <Link
+              <button
                 key={sec.name}
-                href={`#${sec.id}`}
-                onClick={() => setIsOpen(false)}
-                className="text-2xl font-black text-white hover:scale-110 transition"
+                onClick={() => scrollToSection(sec.id)}
+                className="text-2xl font-black text-white hover:scale-110 transition cursor-pointer"
               >
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-cyan-300">
                   {sec.name}
                 </span>
-              </Link>
+              </button>
             ))}
 
             <a
               href="https://github.com/AyanKhalid-Dev"
               target="_blank"
-              className="p-4 rounded-3xl bg-gradient-to-r from-purple-600 to-cyan-600 hover:scale-110 transition shadow-2xl"
+              className="p-4 rounded-3xl bg-gradient-to-r from-purple-600 to-cyan-600 hover:scale-110 transition shadow-2xl cursor-pointer"
             >
               <Github className="w-10 h-10 text-white" />
             </a>
