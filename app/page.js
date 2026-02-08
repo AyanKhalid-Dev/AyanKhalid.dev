@@ -1050,7 +1050,7 @@ export default function LandingPage() {
               <h4 className="font-bold mb-4">Connect</h4>
               <ul className="space-y-2 text-sm text-gray-400">
                 <li><a href="mailto:ayan@ayankhalid.dev" target='_blank' className="hover:text-cyan-400 transition-colors">Email</a></li>
-                <li><a href="https://www.instagram.com/ayankhalidai/" target='_blank' className="hover:text-cyan-400 transition-colors">Twitter</a></li>
+                <li><a href="https://www.instagram.com/ayankhalidai/" target='_blank' className="hover:text-cyan-400 transition-colors">Instagram</a></li>
                 <li><a href="https://www.linkedin.com/in/ayankhalid/" target='_blank' className="hover:text-cyan-400 transition-colors">LinkedIn</a></li>
               </ul>
             </div>
