@@ -212,7 +212,7 @@ export default function LandingPage() {
               className="inline-block mb-6 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm"
             >
               <span className="text-sm font-medium text-cyan-400">
-                AI-Powered Wealth Coaching Infrastructure
+                AI-Powered Coaching Infrastructure
               </span>
             </motion.div>
 
@@ -381,7 +381,7 @@ export default function LandingPage() {
             className="text-center py-8 border-t border-cyan-500/10"
           >
             <p className="text-lg text-gray-400">
-              The difference? A custom-built AI ecosystem engineered specifically for wealth coaches.
+              The difference? A custom-built AI ecosystem engineered specifically for coaches.
             </p>
           </motion.div>
         </div>
@@ -702,11 +702,11 @@ export default function LandingPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Built by a Full-Stack Engineer, For Wealth Coaches
+                Built by a Full-Stack Engineer, For Coaches
               </h2>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 I'm Ayan Khalid. I'm a full-stack engineer who spent the last 1 year building AI 
-                automation systems for B2B businesses. When I started working with wealth coaches, 
+                automation systems for B2B businesses. When I started working with coaches, 
                 I noticed a clear pattern: they're brilliant at coaching, but drowning in admin work.
               </p>
               <p className="text-gray-400 mb-6 leading-relaxed">
@@ -896,7 +896,7 @@ export default function LandingPage() {
               Results Speak Louder
             </h2>
             <p className="text-lg text-gray-400">
-              Real outcomes from wealth coaches using our AI ecosystem.
+              Real outcomes from coaches using our AI ecosystem.
             </p>
           </motion.div>
 
@@ -1032,7 +1032,7 @@ export default function LandingPage() {
                   AYAN KHALID
                 </span>
               </div>
-              <p className="text-sm text-gray-400">AI Systems Architect for Wealth Coaches</p>
+              <p className="text-sm text-gray-400">AI Systems Architect for Coaches</p>
             </div>
 
             {/* Links */}
