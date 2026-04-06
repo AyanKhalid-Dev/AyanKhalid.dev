@@ -1,5 +1,5 @@
 // app/page.tsx  (ya components/Hero.tsx — jahan bhi hai)
-import { Github, ExternalLink, Mail, Calendar, Code2, Zap, Rocket } from 'lucide-react';
+import { Github, ExternalLink, Mail, PhoneCall, Code2, Zap, Rocket } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -191,18 +191,18 @@ export default function Home() {
             <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10 hover:border-purple-500/60 transition-all duration-500 hover:scale-105">
               <div className="flex flex-col items-center space-y-5">
                 <div className="p-6 bg-purple-500/10 rounded-2xl">
-                  <Calendar className="w-16 h-16 text-purple-400" />
+                  <PhoneCall className="w-16 h-16 text-purple-400" />
                 </div>
-                <p className="text-purple-300 text-sm tracking-wider">BOOK A CALL</p>
-                <a href="https://calendly.com/ayan-ayankhalid/15-minute-meeting" target="_blank" rel="noopener noreferrer" className="text-2xl md:text-3xl font-black text-white hover:text-purple-300 transition">
-                  Free 15-min Strategy Call
+                <p className="text-purple-300 text-sm tracking-wider">CALL / WHATSAPP</p>
+                <a href="tel:03285839471" className="text-2xl md:text-3xl font-black text-white hover:text-purple-300 transition">
+                  03285839471
                 </a>
               </div>
             </div>
           </div>
 
-          <a href="https://calendly.com/ayan-ayankhalid/30min" target="_blank" className="mt-16 px-12 py-6 sm:px-16 sm:py-8 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-xl sm:text-2xl font-black rounded-full hover:scale-110 transition-all shadow-2xl">
-            Book Free Call Now
+          <a href="https://wa.me/923285839471" target="_blank" rel="noopener noreferrer" className="mt-16 px-12 py-6 sm:px-16 sm:py-8 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-xl sm:text-2xl font-black rounded-full hover:scale-110 transition-all shadow-2xl">
+            WhatsApp Now
           </a>
         </div>
       </section>
@@ -234,15 +234,13 @@ export default function Home() {
         <span className="text-white font-medium text-lg">ayan@ayankhalid.dev</span>
       </a>
 
-      {/* Book a Call */}
+      {/* Call / WhatsApp */}
       <a
-        href="https://calendly.com/ayan-ayankhalid/15-minute-meeting"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="tel:03285839471"
         className="group flex items-center gap-4 px-8 py-5 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-2xl hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl hover:shadow-purple-600/50"
       >
-        <Calendar className="w-7 h-7 text-white group-hover:scale-110 transition" />
-        <span className="text-white font-bold text-lg">Book Free Call</span>
+        <PhoneCall className="w-7 h-7 text-white group-hover:scale-110 transition" />
+        <span className="text-white font-bold text-lg">03285839471</span>
       </a>
 
       {/* GitHub */}
