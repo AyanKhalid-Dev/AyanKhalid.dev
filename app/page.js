@@ -40,8 +40,11 @@ const features = [
 
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [videoOpen, setVideoOpen] = useState(false);
   const { scrollY } = useScroll();
   const headerBg = useTransform(scrollY, [0, 120], ['rgba(0,0,0,0)', 'rgba(0,0,0,0.92)']);
+  const ytId = 'HU0wY5JZVCc';
+  const thumbUrl = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
 
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
@@ -175,6 +178,56 @@ export default function LandingPage() {
             </a>
           </motion.div>
         </div>
+      </section>
+
+      {/* ==================== VIDEO DEMO ==================== */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center"
+        >
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-white">
+            Watch the Product Demo
+          </h3>
+          <div className="mx-auto w-full max-w-[315px]">
+            <div
+              className="relative overflow-hidden rounded-xl border border-cyan-500/20 bg-gray-950/40"
+              style={{ aspectRatio: '9 / 16' }}
+            >
+              {!videoOpen ? (
+                <>
+                  <img
+                    src={thumbUrl}
+                    alt="Product demo thumbnail"
+                    className="absolute inset-0 h-full w-full object-cover"
+                    draggable={false}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setVideoOpen(true)}
+                    className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/20 transition-colors"
+                    aria-label="Play product demo"
+                  >
+                    <span className="text-white text-6xl leading-none drop-shadow">
+                      ▶
+                    </span>
+                  </button>
+                </>
+              ) : (
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src={`https://www.youtube.com/embed/${ytId}?autoplay=1`}
+                  title="YouTube product demo"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              )}
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       <section id="features" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
