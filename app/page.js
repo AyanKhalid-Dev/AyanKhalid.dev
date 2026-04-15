@@ -347,9 +347,7 @@ export default function LandingPage() {
       <section id="contact" className="border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 text-center">
           <h3 className="text-3xl md:text-4xl font-bold">Contact for Demo / Setup</h3>
-          <p className="text-gray-400 mt-4 text-lg">
-            No Calendly. Direct call and WhatsApp support for faster response.
-          </p>
+          
           <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center justify-center">
             <a
               href="tel:03285839471"
